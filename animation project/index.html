@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERN LAB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .button {
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="slider">
+        <div class="slides" style="--img: url('https://upload.wikimedia.org/wikipedia/commons/b/bd/CNC_MACHINE.jpg')">
+            <div class="content">
+                <h2>slide 02</h2>
+                <p>hey this is slide number one you know !!</p>
+            </div>
+
+            </div>
+            <div class="slides" style="--img: url('https://image.made-in-china.com/226f3j00TazoPHyFHGkn/Hualong-Hknc-650j-Multifunctional-5-Axis-CNC-Bridge-Stone-Slab-Sawjet-Cutting-Machine-for-Granite-Marble-in-America-India-Kenya.webp')">
+                <div class="content">
+                    <h2 style="color: #f4511e;">5 Axis Stone CNC Sawjet HKNC-450J </h2>
+                    <p>Cutting Machine High Efficiency Esa System Saw Jet in Stone Machinery for Quartz, Granite, Marble and Dekton</p>
+                    <button class="button"  onclick="window.location.href='newpage.html'"><span>Watch </span></button>
+                </div>
+                    
+                </div>
+                <div class="slides" style="--img: url('https://t3.ftcdn.net/jpg/01/72/04/10/360_F_172041052_QnCn1r4ndnsOIv9TC3Adltg1eOSRC3KS.jpg')">
+                    <div class="content">
+                        <img src="img/images (1).jpeg" alt="">
+                        <h2>slide 02</h2>
+                        <p>hey this is slide number one you know !!</p>
+                    </div>
+                        
+                    </div>
+                    <div class="slides" style="--img: url('https://media.istockphoto.com/id/1392300189/photo/cnc-milling-machine-processing-and-laser-cutting-for-metal-in-the-industrial-motion-blur.jpg?s=612x612&w=0&k=20&c=eYnFePxKVUe99rPHyS_hwf-VILiUaNgdAlMGkir7sbk=')">
+                        <div class="content">
+                            <h2>slide 03</h2>
+                            <p>hey this is slide number one you know !!</p>
+                        </div>
+                            
+                        </div>
+                        <div class="slides" style="--img: url('https://media.istockphoto.com/id/139933722/photo/cnc-lathe-drilling.jpg?s=612x612&w=0&k=20&c=cMSGGPhAZBjxHtIm_kSyuehKoeBKZO7j2-tQqXC-pKk=')">
+                            <div class="content">
+                                <h2>slide 04</h2>
+                                <p>hey this is slide number one you know !!</p>
+                            </div>
+                                
+                            </div>
+                            <div class="slides" style="--img: url('https://brandywinevalleyfab.com/wp-content/uploads/2024/04/AdobeStock_363381638-1024x608.jpeg')">
+                                <div class="content">
+                                    <h2>slide 05</h2>
+                                    <p>hey this is slide number one you know !!</p>
+                                </div>
+                                    
+                                </div>
+                                                            
+
+       </div>
+
+        
+       <!--button working -->
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+  <script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.prepend(slides[slides.length -1]);
+    })
+  </script>  
+</body>
+</html>
